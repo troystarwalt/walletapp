@@ -1,4 +1,4 @@
-class UsersCardsController < ApplicationController
+class UserCardsController < ApplicationController
 
 	def create
 		puts "UsersCardsController.create()"
@@ -10,12 +10,12 @@ class UsersCardsController < ApplicationController
 			card_id: params[:card_id])
 		# user_id = session[:user_id]
 		# card_id = params[:card][:id]
-		sleep 2
-		redirect_to users_cards_path
+		flash[:notice] = "Card Added"
+		redirect_to user_cards_path
 	end
 
 	def index
-		@users_cards = UserCard.all
+		@user_cards = UserCard.all
 	end
 
 	def destroy
@@ -25,4 +25,5 @@ class UsersCardsController < ApplicationController
 
 		redirect_to card_path(card_id)
 	end
+
 end

@@ -6,7 +6,7 @@
     <%= form_tag login_path do %>
     <div id="email_login">
       <%= label_tag 'email' %> <br>
-      <%= email_field_tag 'email', 'Email Address', class: "ses_input_area" %><br>
+      <%= email_field_tag 'email', nil, placeholder: 'Email Address', class: "ses_input_area" %><br>
     </div>
     <div id="password_login">
       <%= label_tag 'password' %> <br>

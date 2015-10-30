@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
 		result = User.all.where(
 			email: params[:email], password: params[:password]).first
 		if result
-			session[:user_id] = result.user_id
 			flash[:notice] = "You have logged in!"
 			redirect_to user_path result
 		else

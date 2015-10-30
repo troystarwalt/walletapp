@@ -31,7 +31,8 @@ class CardsController < ApplicationController
 	end
 
 	def destroy
-			
+		Card.find(params[:id]).destroy
+		redirect_to cards_path
 	end
 
 	def index
