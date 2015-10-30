@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023192459) do
+ActiveRecord::Schema.define(version: 20151026215154) do
 
   create_table "cards", force: :cascade do |t|
     t.text     "number"
-    t.text     "type"
+    t.text     "cardtype"
     t.integer  "expires_month"
     t.integer  "expires_year"
     t.text     "code"
@@ -39,8 +39,11 @@ ActiveRecord::Schema.define(version: 20151023192459) do
     t.text     "fname"
     t.text     "lname"
     t.decimal  "balance"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.text     "password"
+    t.string   "salt"
+    t.string   "password_digest"
   end
 
 end

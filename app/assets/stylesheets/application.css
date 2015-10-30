@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+body * + * { 
+  margin-top: 1.5rem; 
+}
+
+h1, h2 { margin-top: 1.5rem; } 
+h1 { font-size: 2.5em; } 
+h2 { font-size: 2em; } 
+/* all your other element styles */
+
+@media (min-width: 400px) { 
+  html { 
+    font-size: 120%; 
+  } 
+}
+
+.notice {
+	background-color: pink;
+}

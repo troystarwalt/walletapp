@@ -1,0 +1,7 @@
+<% @cards.each do |c| %>
+<p><%= c.number %></p>
+<%= link_to "Delete", card_path(c.id), method: :delete %>
+<%= link_to "Add Card To Wallet", users_cards_path(card_id: c.id, user_id: 2), method: :post %>
+<% end %>
+
+<!-- Need to unharddocde  user_id using session[:user_id] -->
