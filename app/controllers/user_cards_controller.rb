@@ -7,7 +7,8 @@ class UserCardsController < ApplicationController
 		# result = UserCard.create(params.permit(:user_id).permit(:card_id))
 		result = UserCard.create(
 			user_id: params[:user_id],
-			card_id: params[:card_id])
+			card_id: params[:card_id]
+		)
 		# user_id = session[:user_id]
 		# card_id = params[:card][:id]
 		flash[:notice] = "Card Added"
