@@ -20,8 +20,12 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		puts "Calling users#show with #{params[:id]}"
-		@user = User.find(params[:id])
+		# puts "Calling users#show with #{params[:id]}"
+		# @user = User.find(params[:id])
+	end
+
+	def edit
+		puts "This is edit"
 	end
 
 	def destroy
